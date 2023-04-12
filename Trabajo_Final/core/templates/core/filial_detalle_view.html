@@ -1,0 +1,14 @@
+
+{% extends 'core/base.html' %}
+
+{% block contenido_central %}
+
+<p>Nombre del filial: <i>{{ filial.nombre }}</i></p>
+<p>Sede: <i>{{ filial.sede }}</i></p>
+<p>
+    <a href="{% url 'mostrar' %}">Regresar</a>
+</p>
+
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+
+{% extends 'core/base.html' %}
+
+{% block contenido_central %}
+{{ msj }}
+<form action="" method="POST">
+
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <button type="submit">Actualizar</button>
+
+</form>
+
+{% endblock %}

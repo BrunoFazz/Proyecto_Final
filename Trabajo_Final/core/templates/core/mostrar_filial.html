@@ -1,0 +1,30 @@
+
+{% extends 'core/base.html' %}
+
+{% block contenido_central %}
+
+<table>
+    <th>id</th>
+    <th>Nombre</th>
+    <th>Sede</th>
+    <th>Editar Func</th>
+    <th>Eliminar Func</th>
+    <th>Editar View</th>
+    <th>Eliminar View</th>
+    <th>Detalle View</th>
+
+    {% for filial in filiales %}
+        <tr>
+            <td>{{ filial.id }}</td>
+            <td>{{ filial.nombre }}</td>
+            <td>{{ filial.sede }}</td>
+            <td><a href="{% url 'editar' filial.id %}">Editar</a></td>
+            <td><a href="{% url 'eliminar' filial.id %}">Eliminar</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+
+{% endblock %}

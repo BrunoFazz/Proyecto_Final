@@ -1,0 +1,1 @@
+Ejecutar el manage.py desde carpeta Trabajo_Final

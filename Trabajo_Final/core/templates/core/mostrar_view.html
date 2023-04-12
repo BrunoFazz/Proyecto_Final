@@ -1,0 +1,20 @@
+
+{% extends 'core/base.html' %}
+
+{% block contenido_central %}
+
+<ul>
+    {% for filial in object_list %}
+        <li>
+            <p>Id: {{ filial.id }} - Nombre: {{ filial.nombre }}</p>
+            <p>                 
+                <a href="{% url 'edit_view' filial.id %}"></a>
+                <a href="{% url 'detalle_view' filial.id %}"></a>
+                <a href="{% url 'delete_view' filial.id %}"></a>                
+            </p>
+        </li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}  

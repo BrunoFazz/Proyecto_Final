@@ -1,0 +1,18 @@
+
+{% extends 'core/base.html' %}
+
+{% block contenido_central %}
+<form action="" method="POST">
+{% csrf_token %}
+<table>
+    {{ form.as_table }}
+    
+</table>
+<input type="submit" value ="agregar">
+</form>
+{% endblock %}  
+
+
+
+
+
